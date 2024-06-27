@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 test("test", async ({ page }) => {
-  await page.goto("https://www.angelsolutions.co.uk/");
+  await page.goto(`${process.env.HOST_URL}`);
   await page.getByRole("link", { name: "View All Products" }).click();
   await page.getByRole("link", { name: "Find out more" }).click();
   await page.getByRole("link", { name: "Contact" }).click();
